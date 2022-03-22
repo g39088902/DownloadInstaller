@@ -13,26 +13,10 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
-    signingConfigs {
-        debug {
-            storeFile file("../Onyx-key.jks")
-            storePassword "QnRdaSDjHSh87zCK"
-            keyAlias "whiteboard-onyx"
-            keyPassword "QnRdaSDjHSh87zCK"
-        }
-        release {
-            storeFile file("../Onyx-key.jks")
-            storePassword "QnRdaSDjHSh87zCK"
-            keyAlias "whiteboard-onyx"
-            keyPassword "QnRdaSDjHSh87zCK"
-        }
-    }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
         }
     }
 
