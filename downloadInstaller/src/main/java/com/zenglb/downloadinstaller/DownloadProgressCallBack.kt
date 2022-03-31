@@ -1,11 +1,13 @@
-package com.zenglb.downloadinstaller;
+package com.zenglb.downloadinstaller
+
+import java.lang.Exception
 
 /**
  * 下载进度回调
  *
  */
-public interface DownloadProgressCallBack {
-     void downloadProgress(int progress);
-     void downloadException(Exception e);
-     void onInstallStart();
+interface DownloadProgressCallBack {
+    fun downloadProgress(progress: Int)
+    fun downloadException(e: Exception?)
+    fun onInstallStart()
 }
